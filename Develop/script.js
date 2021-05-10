@@ -4,7 +4,7 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var symbols = ["!", "@", "#", "$", "%", "^", "&", "*"];
-generatePassword = ["#password"]
+generatePassword = ["password"]
 
 // Create a function for generating password 
 function generatePassword() {
@@ -29,6 +29,7 @@ function generatePassword() {
       alert("Please choose a password length between 8 and 128.");
       plength = parseInt(prompt("How many characters do you want the password to be? The password cannot be less than 8 or more than 128 characters."));
     }
+
     // If character type is selected, the array name is stored into a group array
   if (lowercase == true) {
     caseArray.push(lowercase);
@@ -47,12 +48,8 @@ function generatePassword() {
   }
   return retVal;
   };
+}
 
-  generatePassword();
-};
-
-passwordEntry.textContent = passwordString;
-
-let generateButton = document.getElementById("#generate");
-let passwordEntry = document.getElementById("#password");
+let generateButton = document.getElementById("generate");
+let passwordEntry = document.getElementById("password");
 generateButton.onclick = generatePassword;
